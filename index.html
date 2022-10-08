@@ -1,0 +1,339 @@
+<!--
+    Ethan Bao
+    CPSC 332 Web Development
+    HW3
+    10/07/2022
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Bao CV Page</title>
+    <link rel="icon" href="pngtree-graduation-cap-flat-multi-color-icon-png-image_315724.jpg">
+    
+    <style>
+        .body {
+            max-width: 700px;
+            width: 95%;
+            margin: 0px auto;
+            display: grid;
+            grid-template-columns: 20% auto;
+            grid-template-rows: 60px max-content;
+            grid-template-areas:
+                "head head head"
+                "nav main main";
+        }
+
+        .header {
+            background: lightslategray;
+            grid-area: head;
+            line-height: 60px;
+        }
+
+        .intro {
+            background: rgb(56, 192, 56);
+            grid-area: nav;
+        }
+
+        .content {
+            background: cornflowerblue;
+            grid-area: main;
+        }
+
+        .logo {
+            float: left;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            width: 10%;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 75%;
+            max-height: 75%;
+        }
+        .links {
+           float: right;
+           font-size: 13pt;
+           padding-right: 10px;
+        }
+
+        .profilePicture {
+            border-radius: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;;
+            border: 2px solid blue;
+        }
+
+        .nameTitle {
+            text-align: center;
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        .summary {
+            border-top: 3px solid;
+            border-bottom: 3px solid;
+            font-size: 8pt;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .skills {
+            font-weight: bold;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .skills ul {
+            font-weight: lighter;
+            list-style-type: square;
+            border: 1px solid;
+        }
+
+        .career {
+            font-weight: bold;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .career table, th, td {
+            padding-left: 5px;
+            padding-right: 5px;
+            font-weight: lighter;
+            font-size: 8pt;
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+        .career tr:nth-child(even) {
+            background-color:azure;
+        }
+        .career tr:nth-child(odd) {
+            background-color:burlywood;
+        }
+
+        .education {
+            font-weight: bold;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .education table, th, td {
+            padding-left: 5px;
+            padding-right: 5px;
+            font-weight: lighter;
+            font-size: 8pt;
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+        .education tr:nth-child(even) {
+            background-color:cyan;
+        }
+        .education tr:nth-child(odd) {
+            background-color:lightcoral;
+        }
+        .interests {
+            font-weight: bold;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .interests ol {
+            font-weight: lighter;
+            list-style-type: upper-roman;
+            border: 1px solid;
+        }
+        .interests img {
+            border-radius: 10px;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<div class="body">
+    <div class="header">
+        <header>
+            <div class="logo">
+                <img src="Logo.png" alt="Page Logo">
+            </div>
+            <div class="links">
+                <nav>
+                    <a href="#career">Career</a>
+                    <a href="#education">Education</a>
+                    <a href="#interests">Interests</a>
+                    <!-- Career - Education - Interests -->
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="intro">
+        <section>
+            <div class="profilePicture">
+                <img src="IMG_2655.jpg" alt="Profile Picture">
+            </div>
+            <div class="nameTitle">
+                Ethan Bao <br> CFO Solutions Intern
+            </div>
+            <div class="summary">
+                <p>
+                    Welcome to my webpage! I am a current a senior at Gonzaga University finishing my
+                    degree in Computer Science. My time here has been very fruitful in expanding my knowledge in Computer Science as well as other fields
+                    Throughout my time at Gonzaga, I have developed strong coding expertise
+                    in Java, C++, Python, HTML, and SQL. Other fields that I excel in are Android App Development and UI/UX design.
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="content">
+        <section>
+            <div class="skills">
+                <p>Skills</p>
+                <ul>
+                    <li>Coding Proficiency (Java, C++, SQL, Python, HTML)</li>
+                    <li>Leadership</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </div>
+            <div class="career">
+                <p id="career">Career Summary</p>
+                <table>
+                    <caption>Work Experience</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Company</th>
+                            <th>Title</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>May 2021 - August 2021</td>
+                        <td>Steve & Kate's Camp</td>
+                        <td>Summer Camp Counselor</td>
+                        <td>Led a group of 20-30 children through day-to-day activities at camp</td>
+                    </tr>
+                    <tr>
+                        <td>May 22 - Current</td>
+                        <td>CFO Solutions</td>
+                        <td>OneStream/Oracle Intern</td>
+                        <td>Work closely with OneStream to create systems useable by clients</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <caption>Projects</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Project Name</th>
+                            <th>Language</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>December 2020</td>
+                        <td>Yahtzee</td>
+                        <td>Java</td>
+                        <td>Emulated the board game Yahtzee. It also allowed multiplayer.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>December 2021</td>
+                        <td>Drawing Android RPG</td>
+                        <td>Java</td>
+                        <td>Created an Android game that allowed the player to draw their character and fight an enemy</td>
+                    </tr>
+                    <tr>
+                        <td>December 2021</td>
+                        <td>VTuber Wiki</td>
+                        <td>SQL & HTML</td>
+                        <td>Created a wiki on VTuber's backed by a MySQL database. Would display
+                            information based on the query sent to the database
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="education">
+                <p id="education">Education & Qualifications</p>
+                <table>
+                    <caption>Education</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>School</th>
+                            <th>GPA</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>August 2015 - May 2019</td>
+                        <td>Evergreen Valley High School</td>
+                        <td>3.85</td>
+                    </tr>
+                    <tr>
+                        <td>August 2019 - May 2023</td>
+                        <td>Gonzaga University</td>
+                        <td>3.88</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <caption>Important Classes</caption>
+                    <thead>
+                        <tr>
+                            <th>Semester</th>
+                            <th>Course Number</th>
+                            <th>Class Name</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Spring 2020</td>
+                        <td>CPSC 223</td>
+                        <td>Algorithms & Abstract Data Structures</td>
+                    </tr>
+                    <tr>
+                        <td>Fall 2021</td>
+                        <td>CPSC 312</td>
+                        <td>Android App Development</td>
+                    </tr>
+                    <tr>
+                        <td>Fall 2021</td>
+                        <td>CPSC 321</td>
+                        <td>Database Management Systems</td>
+                    </tr>
+                    <tr>
+                        <td>Spring 2022</td>
+                        <td>CPSC 326</td>
+                        <td>Organization of Programming Languages</td>
+                    </tr>
+                    <tr>
+                        <td>Fall 2022</td>
+                        <td>CPSC 450</td>
+                        <td>Design & Analysis of Algorithms</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="interests">
+                <p id="interests">Interests</p>
+                <ol>
+                    <li>Physics</li>
+                    <li>Space</li>
+                    <li>Game Development</li>
+                    <li>App Development</li>
+                    <li>Earth Science</li>
+                </ol>
+                <p>My Hobbies</p>
+                <ol>
+                    <li>Hiking</li>
+                    <li>Running</li>
+                    <li>Buying Figures</li>
+                    <li>Video Games</li>
+                    <br>
+                    <a href="https://www.ea.com/games/apex-legends" target="_blank">
+                        <img src="apexLegends.jpg" alt="ApexLegends" height="200" width="300">
+                    </a>
+                </ol>
+            </div>
+        </section>
+    </div>
+</div>
+</html>
